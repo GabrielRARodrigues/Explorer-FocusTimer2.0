@@ -1,3 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --font: 'Roboto', sans-serif;
+
+  --primary-color: #ffffff;
+  --secondary-color: #323238;
+  --terciary-color: #02799d;
+
+  --bg-sound-button-color: #e1e1e6;
+
+  --base-font-size: 12.6rem;
+  --base-line-height: 14.8rem;
+}
+
+body {
+  background-color: var(--primary-color);
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  font-family: var(--font);
+  font-size: 1.6rem;
+}
+
+main {
+  width: 82rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .hide {
   display: none;
+}
+
+.timer__time {
+  display: flex;
+
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  color: var(--secondary-color);
+  font-weight: 500;
+
+  margin-bottom: 1.6rem;
+}
+
+.timer__controls {
+  display: flex;
+  gap: 4rem;
+}
+
+.timer-controls__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sounds__buttons {
+  display: flex;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+
+  max-width: 30.8rem;
+}
+
+.sounds-buttons__button {
+  background-color: var(--bg-sound-button-color);
+
+  padding: 4.8rem 4.1rem;
+
+  border: none;
+  border-radius: 24px;
+
+  cursor: pointer;
+}
+
+.sounds-buttons__button--active {
+  background-color: #02799d;
+}
+.sounds-buttons__button--active svg path {
+  fill: var(--primary-color);
 }
