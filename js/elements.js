@@ -12,8 +12,14 @@ const fireplaceSoundButton = document.querySelector('[data-sound-fireplace]')
 const coffeeShopSoundButton = document.querySelector('[data-sound-coffeeshop]')
 
 export {
+  minutesTimerView,
+  secondsTimerView,
   rainSoundButton,
   forestSoundButton,
   fireplaceSoundButton,
-  coffeeShopSoundButton
+  coffeeShopSoundButton,
+  controlsButtonPlay,
+  controlsButtonStop,
+  controlsButtonMinus,
+  controlsButtonPlus
 }

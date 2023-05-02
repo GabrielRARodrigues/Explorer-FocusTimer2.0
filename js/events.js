@@ -5,7 +5,12 @@ export default function ({
   rainSoundButton,
   forestSoundButton,
   fireplaceSoundButton,
-  coffeeShopSoundButton
+  coffeeShopSoundButton,
+  controlsButtonPlay,
+  controlsButtonStop,
+  controlsButtonPlus,
+  controlsButtonMinus,
+  controls
 }) {
   function activeOrDesactiveSound(soundButtonElement, soundAudioElement) {
     if (
@@ -18,6 +23,22 @@ export default function ({
       soundButtonElement.classList.add('sounds-buttons__button--active')
     }
   }
+
+  controlsButtonPlay.addEventListener('click', function () {
+    controls.play()
+  })
+
+  controlsButtonStop.addEventListener('click', function () {
+    controls.stop()
+  })
+
+  controlsButtonPlus.addEventListener('click', function () {
+    controls.plus()
+  })
+
+  controlsButtonMinus.addEventListener('click', function () {
+    controls.minus()
+  })
 
   rainSoundButton.addEventListener('click', function () {
     activeOrDesactiveSound(rainSoundButton, 'rainAudio')

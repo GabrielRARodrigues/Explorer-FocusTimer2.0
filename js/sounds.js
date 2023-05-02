@@ -15,10 +15,16 @@ export default function () {
   fireplaceAudio.loop = true
   fireplaceAudio.volume = 1
 
+  const timeEndAudio = new Audio('./assets/sounds/TimeEnd.mp3')
+
+  const buttonPressAudio = new Audio('./assets/sounds/ButtonPress.wav')
+
   return {
     forestAudio,
     coffeeShopAudio,
     rainAudio,
-    fireplaceAudio
+    fireplaceAudio,
+    timeEndAudio,
+    buttonPressAudio
   }
 }
