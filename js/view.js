@@ -13,8 +13,30 @@ export default function ({ minutesTimerView, secondsTimerView }) {
     return newMinutes
   }
 
+  function activeLightMode() {
+    changeGlobalCSSVariableValue('--primary-color', '#ffffff')
+    changeGlobalCSSVariableValue('--secondary-color', '#323238')
+    changeGlobalCSSVariableValue('--terciary-color', '#02799d')
+    changeGlobalCSSVariableValue('--bg-sound-button-color', '#e1e1e6')
+    changeGlobalCSSVariableValue('--fill-svg-color', '#323238')
+  }
+
+  function activeDarkMode() {
+    changeGlobalCSSVariableValue('--primary-color', '#121214')
+    changeGlobalCSSVariableValue('--secondary-color', '#FFFFFF')
+    changeGlobalCSSVariableValue('--terciary-color', '#0A3442')
+    changeGlobalCSSVariableValue('--bg-sound-button-color', '#29292E')
+    changeGlobalCSSVariableValue('--fill-svg-color', '#C4C4CC')
+  }
+
+  function changeGlobalCSSVariableValue(CSSVariable, value) {
+    document.documentElement.style.setProperty(CSSVariable, value)
+  }
+
   return {
     updateTimer,
-    getMinutes
+    getMinutes,
+    activeLightMode,
+    activeDarkMode
   }
 }

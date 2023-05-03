@@ -15,6 +15,9 @@
 
   --bg-sound-button-color: #e1e1e6;
 
+  --fill-svg-color: #323238;
+  --fill-svg-active-color: #ffffff;
+
   --base-font-size: 12.6rem;
   --base-line-height: 14.8rem;
 }
@@ -36,6 +39,10 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+button svg path {
+  fill: var(--fill-svg-color);
 }
 
 .hide {
@@ -87,5 +94,16 @@ main {
   background-color: #02799d;
 }
 .sounds-buttons__button--active svg path {
-  fill: var(--primary-color);
+  fill: var(--fill-svg-active-color);
+}
+
+.viewMode {
+  position: absolute;
+  top: 64px;
+  right: 64px;
+}
+.viewMode__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

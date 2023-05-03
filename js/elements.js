@@ -13,6 +13,9 @@ const forestSoundButton = document.querySelector('[data-sound-forest]')
 const fireplaceSoundButton = document.querySelector('[data-sound-fireplace]')
 const coffeeShopSoundButton = document.querySelector('[data-sound-coffeeshop]')
 
+const darkModeButton = document.querySelector('[data-dark-mode-button]')
+const lightModeButton = document.querySelector('[data-light-mode-button]')
+
 export {
   minutesTimerView,
   secondsTimerView,
@@ -25,5 +28,7 @@ export {
   controlsButtonSet,
   controlsButtonStop,
   controlsButtonMinus,
-  controlsButtonPlus
+  controlsButtonPlus,
+  lightModeButton,
+  darkModeButton
 }

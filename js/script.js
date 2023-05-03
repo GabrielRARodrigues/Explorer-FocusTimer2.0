@@ -10,7 +10,9 @@ import {
   controlsButtonPlus,
   controlsButtonMinus,
   minutesTimerView,
-  secondsTimerView
+  secondsTimerView,
+  darkModeButton,
+  lightModeButton
 } from './elements.js'
 
 import Events from './events.js'
@@ -48,5 +50,9 @@ Events({
   controlsButtonPause,
   controlsButtonPlus,
   controlsButtonMinus,
-  controls
+  controls,
+  darkModeButton,
+  lightModeButton,
+  activeDarkMode: view.activeDarkMode,
+  activeLightMode: view.activeLightMode
 })

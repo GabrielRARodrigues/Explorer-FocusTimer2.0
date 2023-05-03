@@ -12,6 +12,10 @@ export default function ({
   controlsButtonSet,
   controlsButtonPlus,
   controlsButtonMinus,
+  darkModeButton,
+  lightModeButton,
+  activeDarkMode,
+  activeLightMode,
   controls
 }) {
   function activeOrDesactiveSound(soundButtonElement, soundAudioElement) {
@@ -64,5 +68,18 @@ export default function ({
 
   coffeeShopSoundButton.addEventListener('click', function () {
     activeOrDesactiveSound(coffeeShopSoundButton, 'coffeeShopAudio')
+  })
+
+  darkModeButton.addEventListener('click', function () {
+    darkModeButton.classList.add('hide')
+    lightModeButton.classList.remove('hide')
+    activeLightMode()
+    
+  })
+
+  lightModeButton.addEventListener('click', function () {
+    lightModeButton.classList.add('hide')
+    darkModeButton.classList.remove('hide')
+    activeDarkMode()
   })
 }
