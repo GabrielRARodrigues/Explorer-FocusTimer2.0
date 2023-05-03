@@ -7,7 +7,9 @@ export default function ({
   fireplaceSoundButton,
   coffeeShopSoundButton,
   controlsButtonPlay,
+  controlsButtonPause,
   controlsButtonStop,
+  controlsButtonSet,
   controlsButtonPlus,
   controlsButtonMinus,
   controls
@@ -28,8 +30,16 @@ export default function ({
     controls.play()
   })
 
+  controlsButtonPause.addEventListener('click', function () {
+    controls.pause()
+  })
+
   controlsButtonStop.addEventListener('click', function () {
     controls.stop()
+  })
+
+  controlsButtonSet.addEventListener('click', function () {
+    controls.set()
   })
 
   controlsButtonPlus.addEventListener('click', function () {

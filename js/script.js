@@ -4,7 +4,9 @@ import {
   forestSoundButton,
   fireplaceSoundButton,
   controlsButtonPlay,
+  controlsButtonPause,
   controlsButtonStop,
+  controlsButtonSet,
   controlsButtonPlus,
   controlsButtonMinus,
   minutesTimerView,
@@ -24,7 +26,16 @@ const timer = new Timer({
   secondsTimerView,
   updateTimer: view.updateTimer
 })
-const controls = Controls({ sounds, timer })
+
+export const controls = Controls({
+  sounds,
+  timer,
+  view,
+  controlsButtonPause,
+  controlsButtonPlay,
+  controlsButtonSet,
+  controlsButtonStop
+})
 
 Events({
   rainSoundButton,
@@ -32,7 +43,9 @@ Events({
   forestSoundButton,
   coffeeShopSoundButton,
   controlsButtonPlay,
+  controlsButtonSet,
   controlsButtonStop,
+  controlsButtonPause,
   controlsButtonPlus,
   controlsButtonMinus,
   controls

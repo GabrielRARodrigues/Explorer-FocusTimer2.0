@@ -2,7 +2,9 @@ const minutesTimerView = document.querySelector('[data-timer-minutes]')
 const secondsTimerView = document.querySelector('[data-timer-seconds]')
 
 const controlsButtonPlay = document.querySelector('[data-controls-play]')
+const controlsButtonPause = document.querySelector('[data-controls-pause]')
 const controlsButtonStop = document.querySelector('[data-controls-stop]')
+const controlsButtonSet = document.querySelector('[data-controls-set]')
 const controlsButtonPlus = document.querySelector('[data-controls-plus]')
 const controlsButtonMinus = document.querySelector('[data-controls-minus]')
 
@@ -19,6 +21,8 @@ export {
   fireplaceSoundButton,
   coffeeShopSoundButton,
   controlsButtonPlay,
+  controlsButtonPause,
+  controlsButtonSet,
   controlsButtonStop,
   controlsButtonMinus,
   controlsButtonPlus

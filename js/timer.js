@@ -1,4 +1,5 @@
 import Sounds from './sounds.js'
+import { controls } from './script.js'
 
 const { timeEndAudio } = Sounds()
 
@@ -17,7 +18,7 @@ export default function ({ minutesTimerView, updateTimer, secondsTimerView }) {
 
   function countDown() {
     timerTimeOut = setTimeout(function () {
-      let countMinutes = minutes
+      let countMinutes = Number(minutesTimerView.textContent)
       let seconds = Number(secondsTimerView.textContent)
 
       let isFinished = countMinutes <= 0 && seconds <= 0
@@ -25,7 +26,7 @@ export default function ({ minutesTimerView, updateTimer, secondsTimerView }) {
       updateTimer(countMinutes)
 
       if (isFinished) {
-        // resetControls()
+        controls.reset()
         updateTimer(minutes)
         timeEndAudio.play()
         return
@@ -47,13 +48,18 @@ export default function ({ minutesTimerView, updateTimer, secondsTimerView }) {
   }
 
   function addFiveMinutes() {
-    if (minutes === 0) countDown()
+    let minutes = Number(minutesTimerView.textContent)
+    let seconds = Number(secondsTimerView.textContent)
     minutes += 5
+    updateTimer(minutes, seconds)
   }
 
   function removeFiveMinutes() {
+    let minutes = Number(minutesTimerView.textContent)
+    let seconds = Number(secondsTimerView.textContent)
     if (minutes - 5 >= 0) {
       minutes -= 5
+      updateTimer(minutes, seconds)
     } else {
       alert('Não é possível diminuir mais os minutos')
     }
