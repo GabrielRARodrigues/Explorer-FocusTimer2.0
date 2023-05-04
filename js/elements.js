@@ -16,6 +16,11 @@ const coffeeShopSoundButton = document.querySelector('[data-sound-coffeeshop]')
 const darkModeButton = document.querySelector('[data-dark-mode-button]')
 const lightModeButton = document.querySelector('[data-light-mode-button]')
 
+const inputRangeForestAudioVolume = document.querySelector('[data-sound-forest]')
+const inputRangeRainAudioVolume = document.querySelector('[data-sound-rain]')
+const inputRangeFireplaceAudioVolume = document.querySelector('[data-sound-firePlace]')
+const inputRangeCoffeeShopAudioVolume = document.querySelector('[data-sound-coffeeshop]')
+
 export {
   minutesTimerView,
   secondsTimerView,
@@ -30,5 +35,9 @@ export {
   controlsButtonMinus,
   controlsButtonPlus,
   lightModeButton,
-  darkModeButton
+  darkModeButton,
+  inputRangeCoffeeShopAudioVolume,
+  inputRangeFireplaceAudioVolume,
+  inputRangeForestAudioVolume,
+  inputRangeRainAudioVolume,
 }

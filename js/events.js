@@ -16,7 +16,11 @@ export default function ({
   lightModeButton,
   activeDarkMode,
   activeLightMode,
-  controls
+  controls,
+  inputRangeRainAudioVolume,
+  inputRangeCoffeeShopAudioVolume,
+  inputRangeFireplaceAudioVolume,
+  inputRangeForestAudioVolume
 }) {
   function activeOrDesactiveSound(soundButtonElement, soundAudioElement) {
     if (
@@ -74,12 +78,32 @@ export default function ({
     darkModeButton.classList.add('hide')
     lightModeButton.classList.remove('hide')
     activeLightMode()
-    
   })
 
   lightModeButton.addEventListener('click', function () {
     lightModeButton.classList.add('hide')
     darkModeButton.classList.remove('hide')
     activeDarkMode()
+  })
+
+  inputRangeCoffeeShopAudioVolume.addEventListener('change', function (event) {
+    const volume = Number(event.target.value)
+    sounds.changeAudioVolume(sounds.coffeeShopAudio, volume)
+  })
+
+  inputRangeRainAudioVolume.addEventListener('change', function (event) {
+    const volume = Number(event.target.value)
+    console.log(volume)
+    sounds.changeAudioVolume(sounds.rainAudio, volume)
+  })
+
+  inputRangeFireplaceAudioVolume.addEventListener('change', function (event) {
+    const volume = Number(event.target.value)
+    sounds.changeAudioVolume(sounds.fireplaceAudio, volume)
+  })
+
+  inputRangeForestAudioVolume.addEventListener('change', function (event) {
+    const volume = Number(event.target.value)
+    sounds.changeAudioVolume(sounds.forestAudio, volume)
   })
 }

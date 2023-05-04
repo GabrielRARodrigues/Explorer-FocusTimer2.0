@@ -5,19 +5,23 @@ export default function () {
 
   const coffeeShopAudio = new Audio('./assets/sounds/Cafeteria.wav')
   coffeeShopAudio.loop = true
-  coffeeShopAudio.volume = 1
+  coffeeShopAudio.volume = 0.5
 
   const rainAudio = new Audio('./assets/sounds/Chuva.wav')
   rainAudio.loop = true
-  rainAudio.volume = 1
+  rainAudio.volume = 0.5
 
   const fireplaceAudio = new Audio('./assets/sounds/Lareira.wav')
   fireplaceAudio.loop = true
-  fireplaceAudio.volume = 1
+  fireplaceAudio.volume = 0.5
 
   const timeEndAudio = new Audio('./assets/sounds/TimeEnd.mp3')
 
   const buttonPressAudio = new Audio('./assets/sounds/ButtonPress.wav')
+
+  function changeAudioVolume(audio, volume) {
+    audio.volume = volume
+  }
 
   return {
     forestAudio,
@@ -25,6 +29,7 @@ export default function () {
     rainAudio,
     fireplaceAudio,
     timeEndAudio,
-    buttonPressAudio
+    buttonPressAudio,
+    changeAudioVolume
   }
 }

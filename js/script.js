@@ -12,7 +12,11 @@ import {
   minutesTimerView,
   secondsTimerView,
   darkModeButton,
-  lightModeButton
+  lightModeButton,
+  inputRangeRainAudioVolume,
+  inputRangeCoffeeShopAudioVolume,
+  inputRangeFireplaceAudioVolume,
+  inputRangeForestAudioVolume
 } from './elements.js'
 
 import Events from './events.js'
@@ -54,5 +58,9 @@ Events({
   darkModeButton,
   lightModeButton,
   activeDarkMode: view.activeDarkMode,
-  activeLightMode: view.activeLightMode
+  activeLightMode: view.activeLightMode,
+  inputRangeRainAudioVolume,
+  inputRangeCoffeeShopAudioVolume,
+  inputRangeFireplaceAudioVolume,
+  inputRangeForestAudioVolume
 })
