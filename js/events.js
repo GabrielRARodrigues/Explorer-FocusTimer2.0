@@ -1,5 +1,3 @@
-import Sounds from './sounds.js'
-const sounds = Sounds()
 
 export default function ({
   rainSoundButton,
@@ -20,7 +18,8 @@ export default function ({
   inputRangeRainAudioVolume,
   inputRangeCoffeeShopAudioVolume,
   inputRangeFireplaceAudioVolume,
-  inputRangeForestAudioVolume
+  inputRangeForestAudioVolume,
+  sounds
 }) {
   function activeOrDesactiveSound(soundButtonElement, soundAudioElement) {
     if (

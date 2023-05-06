@@ -1,9 +1,11 @@
-import Sounds from './sounds.js'
 import { controls } from './script.js'
 
-const { timeEndAudio } = Sounds()
-
-export default function ({ minutesTimerView, updateTimer, secondsTimerView }) {
+export default function ({
+  minutesTimerView,
+  updateTimer,
+  secondsTimerView,
+  timeEndAudio
+}) {
   let timerTimeOut
   let minutes = Number(minutesTimerView.textContent)
 

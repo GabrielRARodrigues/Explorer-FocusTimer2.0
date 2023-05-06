@@ -34,7 +34,9 @@ body {
 }
 
 main {
-  width: 82rem;
+  width: 100%;
+  max-width: 82rem;
+  padding: 3.2rem;
 
   display: flex;
   justify-content: space-between;
@@ -52,6 +54,7 @@ button svg path {
 .timer__time {
   display: flex;
 
+  justify-content: center;
   font-size: var(--base-font-size);
   line-height: var(--base-line-height);
   color: var(--secondary-color);
@@ -69,6 +72,10 @@ button svg path {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.timer-controls__button--set {
+  margin-bottom: 8px;
 }
 
 .sounds__buttons {
@@ -148,4 +155,30 @@ button svg path {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+@media screen and (max-width: 875px) {
+  .viewMode {
+    top: 32px;
+    right: 32px;
+  }
+
+  main {
+    padding: 5%;
+
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .viewMode {
+    top: 16px;
+    right: 16px;
+  }
+  :root {
+    --base-font-size: 10.8rem;
+    --base-line-height: 10rem;
+  }
 }

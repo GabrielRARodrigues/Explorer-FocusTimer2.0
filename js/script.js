@@ -30,7 +30,8 @@ const view = View({ minutesTimerView, secondsTimerView })
 const timer = new Timer({
   minutesTimerView,
   secondsTimerView,
-  updateTimer: view.updateTimer
+  updateTimer: view.updateTimer,
+  timeEndAudio: sounds.timeEndAudio
 })
 
 export const controls = Controls({
@@ -62,5 +63,6 @@ Events({
   inputRangeRainAudioVolume,
   inputRangeCoffeeShopAudioVolume,
   inputRangeFireplaceAudioVolume,
-  inputRangeForestAudioVolume
+  inputRangeForestAudioVolume,
+  sounds
 })
